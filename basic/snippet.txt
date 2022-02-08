@@ -28,3 +28,17 @@ print(f'{price_val:.2f}') # 5.18
 from datetime import datetime;
 date_val = datetime.utcnow()
 print(f'{date_val=:%Y-%m-%d}') # date_val=2021-09-24
+
+
+##Python Script Shortcut
+#Windows shortcut with the following settings
+\path\to\trc-image-titler.py -o \path\to\output
+
+#Batch execution
+@echo off
+\path\to\trc-image-titler.py -o \path\to\output
+
+#bash script 
+#!/bin/sh
+python /path/to/trc-image-titler.py -o /path/to/output
+
