@@ -19,14 +19,14 @@ yag = yagmail.SMTP(user=sender,password=PASSWORD)
 df = pd.read_csv('contacts.csv')
 
 def generate_file(filename,content):
-    with open(filename+'.txt','w') as file:
+    with open(filename,'w') as file:
         file.write(str(content))
 
 
 for index,row in df.iterrows():
     name = row['name']
     amount = row['amount']
-    generate_file(name,amount)
+    generate_file(f'{name}.txt',amount)
     
     receiver = row['email']
     contents = f'''
